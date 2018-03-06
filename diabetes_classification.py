@@ -1,4 +1,3 @@
-import keras
 from keras.models import Sequential
 from keras.layers import Dense
 import numpy
@@ -14,10 +13,12 @@ Y = dataset[:, 8]
 
 # create model, add dense layers one by one specifying activation function
 model = Sequential()
-model.add(Dense(12, input_dim=8, activation='relu'))  # input layer requires input_dim param
-model.add(Dense(15, activation='relu'))
+model.add(Dense(8, input_dim=8, activation='relu'))  # input layer requires input_dim param
+model.add(Dense(16, activation='relu'))
+model.add(Dense(32, activation='relu'))
+model.add(Dense(16, activation='relu'))
 model.add(Dense(8, activation='relu'))
-model.add(Dense(10, activation='relu'))
+model.add(Dense(4, activation='relu'))
 # sigmoid instead of relu for final probability between 0 and 1
 model.add(Dense(1, activation='sigmoid'))
 
