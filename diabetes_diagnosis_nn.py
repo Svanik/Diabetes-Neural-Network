@@ -2,6 +2,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 from sklearn.model_selection import train_test_split
 import numpy
+import h5py
 
 # random seed for reproducibility
 numpy.random.seed(2)
@@ -12,7 +13,7 @@ dataset = numpy.loadtxt("prima-indians-diabetes.csv", delimiter=",")
 X = dataset[:, 0:8]
 Y = dataset[:, 8]
 x_train, x_validation, y_train, y_validation = train_test_split(
-    X, Y, test_size=0.45, random_state=5)
+    X, Y, test_size=0.30, random_state=5)
 # create model, add dense layers one by one specifying activation function
 model = Sequential()
 model.add(Dense(10, input_dim=8, activation='relu'))  # input layer requires input_dim param
@@ -33,3 +34,5 @@ model.fit(x_train, y_train, epochs=1000, batch_size=10,
 
 scores = model.evaluate(X, Y)
 print("\n%s: %.2f%%" % (model.metrics_names[1], scores[1] * 100))
+
+model.save('diabetes_risk_nn.h5')
