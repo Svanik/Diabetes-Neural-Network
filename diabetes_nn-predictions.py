@@ -28,6 +28,7 @@ while x == 1:
     f = input("Enter Metric 6: ")
     g = input("Enter Metric 7: ")
     h = input("Enter Metric 8: ")
+
     makeprediction = np.array([a, b, c, d, e, f, g, h])
     makeprediction = makeprediction.reshape(1, -1)
     finalprediction = model.predict(makeprediction)

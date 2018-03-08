@@ -35,4 +35,5 @@ model.fit(x_train, y_train, epochs=1000, batch_size=10,
 scores = model.evaluate(X, Y)
 print("\n%s: %.2f%%" % (model.metrics_names[1], scores[1] * 100))
 
+
 model.save('diabetes_risk_nn.h5')
