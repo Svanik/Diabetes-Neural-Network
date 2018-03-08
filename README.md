@@ -1,4 +1,4 @@
-# **Diabetes-Neural-Network**</h1> 
+# **Diabetes Neural Network**</h1> 
 __**By: Svanik Dani**__
 
 
@@ -61,7 +61,7 @@ __**Summary of the Neural Net:<br />**__
 The neural network is a fully connected and feedforward neural network with 3 hidden layers. The loss function used in this case was binary cross entropy and gradient descent was used to adjust weight of each nodes connection to optimize the accuracy of the neural network.<br />
 
 
-__**Flow of the program:<br />**__
+## Flow of the program:<br />
 
 
 __Files:<br />__
