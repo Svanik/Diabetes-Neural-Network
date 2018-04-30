@@ -28,7 +28,6 @@ __**Loss or Cost Function:<br />**__
 
 Binary cross entropy loss function has been used because the output contains either 1 for positive diagnosis or 0 for negative diagnosis. Cross-entropy is used to evaluate the difference in two probabilities. Usually the "true" distribution (the one that neural network is trying to match) is expressed in terms of 1 or 0 for true or false in classification problems. <br />
 
-
 __**Optimizer:<br />**__
 
 Adam has been used as the optimizer because it is an efficient way to apply gradient descent. Gradient descent is an optimization algorithm used to find the values of the parameters of a function that minimizes a loss function, in this case the binary cross entropy discussed above. <br />
@@ -37,21 +36,13 @@ Adam has been used as the optimizer because it is an efficient way to apply grad
 __**Gradient Descent Procedure:<br />**__
 
 Gradient Descent begins with initial values for the parameter of the function. This can be 0 or a random value(usually a small number) between -1 and 1. Let us use coefficients as the parameter for this example.<br />
-
 <p align="center">coefficient = 0.0</p><br />
-
 The loss of the coefficient is evaluated by plugging it into the function and calculating the loss. In this case we used binary-cross-entropy which calculates the difference between predicted and actual. Predicted comes from the neural networks output layer and the actually comes from the dataset.<br />
-
 <p align="center">cost = f(coefficient) or cost = evaluate(f(coefficient))</p><br />
-
 The derivative of the loss is then calculated. Derivative refers to the slope of the function at a given point. The reason the slope is important is to find the direction (sign +/-) to move the coefficient values in order to get a lower loss on the next iteration. Iterations are also known as epochs.<br />
-
 <p align="center">delta = derivative(cost)</p><br />
-
-In our case, the derivative and the sign is negative, hence the coefficient values can be updated accordingly to increase the accuracy. A learning rate parameter (alpha) must be specified that controls how much the coefficients can change on each iteration. The learning rate is important so that we can determine accuracy, progressively with each iteration without changing weights drastically.<br />
-
+In our case, the derivative and the sign is negative, hence the coefficient values can be updated accordingly to increase the accuracy. A learning rate parameter (alpha) must be specified that controls how much the coefficients can change on each iteration. The learning rate is important so that we can determine accuracy, progressively with each iteration without changing weights drastically. For this project the learning reat is 0.001.<br />
 <p align="center">coefficient = coefficient – (alpha * delta)</p><br />
-
 This process is repeated until the loss of coefficients (cost) is 0.0 or close enough to zero to be good enough.<br />
 
 
@@ -141,6 +132,8 @@ Thank you so much for reading about this neural network and how it was construct
 
 
 **~Svanik Dani**
+
+
 
 
 
